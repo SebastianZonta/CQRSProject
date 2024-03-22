@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  verticalslicearchitecture:
+    image: ${DOCKER_REGISTRY-}verticalslicearchitecture
+    build:
+      context: .
+      dockerfile: VerticalSliceArchitecture/Dockerfile
+    ports:
+       - 8080:8080
+       - 8081:8081
+  
+  articles.database:
+     image: mcr.microsoft.com/mssql/server:2022-latest
+     container_name: articles.database
+     environment:
+       - MSSQL_SA_PASSWORD=r00t.R00T
+       - ACCEPT_EULA=Y
+     volumes:
+       - ./.containers/articles-db:/var/lib/sqlserver/data
+     ports:
+       -  5432:5432

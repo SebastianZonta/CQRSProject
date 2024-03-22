@@ -1,0 +1,28 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "verticalslicearchitecture": "StartDebugging",
+        "articles.database": "StartWithoutDebugging"
+      }
+    },
+    "Start my API": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "verticalslicearchitecture": "StartDebugging",
+        "articles.database": "StartWithoutDebugging"
+      }
+    },
+    "Start All": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "verticalslicearchitecture": "StartDebugging",
+        "articles.database": "StartWithoutDebugging"
+      }
+    }
+  }
+}
